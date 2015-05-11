@@ -16,22 +16,22 @@ It does *not* prevent the form from submitting or show visual strength indicator
 <script src="jquery.password-validation.min.js"></script>
 ```
 
-3. Insert the HTML and call the `passwordValidatio` method
+3. Insert the HTML and call the `passwordValidation` method
 ```
-	<input type="password" placeholder="Type your password" class="js-password-validation">
-	<ul id="js-password-validation-container">
-	    <li>10 characters</li>
-	    <li>Capital letters</li>
-	    <li>Numbers</li>
-	    <li>No whitespace</li>
-	    <li>Special characters such as: !@#$%^&*</li>
-	</ul>
+<input type="password" placeholder="Type your password" class="js-password-validation">
+<ul id="js-password-validation-container">
+    <li>10 characters</li>
+    <li>Capital letters</li>
+    <li>Numbers</li>
+    <li>No whitespace</li>
+    <li>Special characters such as: !@#$%^&*</li>
+</ul>
 
-	<script>
-	    $(function(){
-	        $('.js-password-validation').passwordValidation();
-	    });
-	</script>
+<script>
+    $(function(){
+        $('.js-password-validation').passwordValidation();
+    });
+</script>
 ```
 If you still run into trouble getting the plugin to work, look at the /demo directory in this repository.
 
@@ -42,29 +42,29 @@ Pass your regex into the `validation` object. The order of the regex strings sho
 ## Options
 Below are the options and default values you can override by passing a settings object into the plugin:
 ```
-	$(function(){
-	    $('.js-password-validation').passwordValidation({
+$(function(){
+    $('.js-password-validation').passwordValidation({
 
-	    	// Valid CSS class, you can use this to style the validated elements
-	    	validClass: 'is-valid',
+    	// Valid CSS class, you can use this to style the validated elements
+    	validClass: 'is-valid',
 
-			// Invalid CSS class, you can use this to style the invalid elements
-			invalidClass: 'is-invalid',
+		// Invalid CSS class, you can use this to style the invalid elements
+		invalidClass: 'is-invalid',
 
-			// The containing element 
-			validationContainer: '#js-password-validation-container',
+		// The containing element 
+		validationContainer: '#js-password-validation-container',
 
-			// The regex, remember the order is important here,
-			// If you need help with regex use: http://www.regexr.com/ an online tool to learn, build and test regex
-	        validations: [
-	            /^.{10,}/,              									// Validate: atleast 10 characters
-	            /[A-Z]+/,               									// Validate: atleast one capital letter
-	            /\d+/,                  									// Validate: atleast one number
-	            /^\S+$/,                									// Validate: contains no spaces
-	            /[\!\@#\$%\^&\*]+/      									// Validate: atleast one special character
-	        ]
-	    });
-	});
+		// The regex, remember the order is important here,
+		// If you need help with regex use: http://www.regexr.com/ an online tool to learn, build and test regex
+        validations: [
+            /^.{10,}/,              // Validate: atleast 10 characters
+            /[A-Z]+/,               // Validate: atleast one capital letter
+            /\d+/,                  // Validate: atleast one number
+            /^\S+$/,                // Validate: contains no spaces
+            /[\!\@#\$%\^&\*]+/      // Validate: atleast one special character
+        ]
+    });
+});
 ```
 
 ## Why use this plugin?
